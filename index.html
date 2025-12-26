@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Funny People Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Funny People Builder</h1>
+  <p>Drag items, create chaos.</p>
+</header>
+
+<div id="toolbar">
+  <button id="undoBtn">Undo</button>
+  <button id="redoBtn">Redo</button>
+
+  <select id="bgSelect">
+    <option value="">Choose Background</option>
+    <option value="images/beach1.png">Beach</option>
+    <option value="images/city1.png">City</option>
+    <option value="images/park.png">Park</option>
+    <option value="images/river.png">River</option>
+  </select>
+
+  <select id="charSelect">
+    <option value="">Choose Character</option>
+    <option value="images/cute-couple.jpg">Default</option>
+    <option value="images/avengers7.png">Rosie</option>
+    <option value="images/stickboy.png">Stickman</option>
+    <option value="images/Old man.png">Madala</option>
+    <option value="images/girl.jpg">Girlie</option>
+  </select>
+
+  <input type="file" id="upload" accept="image/*">
+  <button id="saveBtn">Save PNG</button>
+  <button id="clearBtn">Clear</button>
+</div>
+
+<!-- SLIDING ITEMS CARD -->
+<div class="card-window">
+  <h3>Pick Items</h3>
+  <div class="slider-row">
+    <img src="images/angela.jpg" class="draggable" alt="Angela">
+    <img src="images/ironman.png" class="draggable" alt="Ironman">
+    <img src="images/avengers_05.jpg" class="draggable" alt="Avengers 05">
+    <img src="images/avengers_06.jpg" class="draggable" alt="Avengers 06">
+    <img src="images/lindo.png" class="draggable" alt="little Cute">
+    <img src="images/beach1.png" class="draggable" alt="Beach">
+    <img src="images/beard.png" class="draggable" alt="Beard">
+    <img src="images/bg_beach.png" class="draggable" alt="Beach Background">
+    <img src="images/bg_beach1.png" class="draggable" alt="Beach Background 1">
+    <img src="images/bg_city.png" class="draggable" alt="City Background">
+    <img src="images/bg_park.jpeg" class="draggable" alt="Park Background">
+    <img src="images/bg_park.png" class="draggable" alt="Park Background 2">
+    <img src="images/bg_school.png" class="draggable" alt="School Background">
+    <img src="images/bg_school1.png" class="draggable" alt="School Background 1">
+    <img src="images/blackwidow.png" class="draggable" alt="Black Widow">
+    <img src="images/boy.png" class="draggable" alt="Boy">
+    <img src="images/boy-sitting.jpg" class="draggable" alt="Boy Sitting">
+    <img src="images/cartoonface.png" class="draggable" alt="Cartoon Face">
+    <img src="images/cheerful.jpg" class="draggable" alt="Cheerful">
+    <img src="images/city1.png" class="draggable" alt="City 1">
+    <img src="images/city2.png" class="draggable" alt="City 2">
+    <img src="images/coat.png" class="draggable" alt="Coat">
+    <img src="images/couple.jpg" class="draggable" alt="Couple">
+    <img src="images/cute-couple.jpg" class="draggable" alt="Cute Couple">
+    <img src="images/dog.png" class="draggable" alt="Dog">
+    <img src="images/doink.png" class="draggable" alt="Doink">
+    <img src="images/drum.png" class="draggable" alt="Drum">
+    <img src="images/eye.png" class="draggable" alt="Eye">
+    <img src="images/eyes_01.png" class="draggable" alt="Eyes 01">
+    <img src="images/eyes_02.png" class="draggable" alt="Eyes 02">
+    <img src="images/eyes_03.png" class="draggable" alt="Eyes 03">
+    <img src="images/eyes_04.png" class="draggable" alt="Eyes 04">
+    <img src="images/eyes_05.png" class="draggable" alt="Eyes 05">
+    <img src="images/eyes_06.png" class="draggable" alt="Eyes 06">
+    <img src="images/eyes_07.png" class="draggable" alt="Eyes 07">
+    <img src="images/eyes_08.png" class="draggable" alt="Eyes 08">
+    <img src="images/face1.png" class="draggable" alt="Face 1">
+    <img src="images/face-hair_01.png" class="draggable" alt="Face Hair 01">
+    <img src="images/face-hair_02.png" class="draggable" alt="Face Hair 02">
+    <img src="images/face-hair_03.png" class="draggable" alt="Face Hair 03">
+    <img src="images/face-hair_04.png" class="draggable" alt="Face Hair 04">
+    <img src="images/face-hair_05.png" class="draggable" alt="Face Hair 05">
+    <img src="images/faces.png" class="draggable" alt="Faces">
+    <img src="images/girl.jpg" class="draggable" alt="Girl">
+    <img src="images/girl.png" class="draggable" alt="Girl">
+    <img src="images/glasses.png" class="draggable" alt="Glasses">
+    <img src="images/glasses_01.png" class="draggable" alt="Glasses 01">
+    <img src="images/glasses_02.png" class="draggable" alt="Glasses 02">
+    <img src="images/glasses_03.png" class="draggable" alt="Glasses 03">
+    <img src="images/glasses_04.png" class="draggable" alt="Glasses 04">
+    <img src="images/glasses_05.png" class="draggable" alt="Glasses 05">
+    <img src="images/glasses_7.png" class="draggable" alt="Glasses 7">
+    <img src="images/hair.png" class="draggable" alt="Hair">
+    <img src="images/hair_01.png" class="draggable" alt="Hair 01">
+    <img src="images/hair_02.png" class="draggable" alt="Hair 02">
+    <img src="images/hair_03.png" class="draggable" alt="Hair 03">
+    <img src="images/hair_04.png" class="draggable" alt="Hair 04">
+    <img src="images/hair_05.png" class="draggable" alt="Hair 05">
+    <img src="images/hair_06.png" class="draggable" alt="Hair 06">
+    <img src="images/hair_07.png" class="draggable" alt="Hair 07">
+    <img src="images/halloween.png" class="draggable" alt="Halloween">
+    <img src="images/hat.png" class="draggable" alt="Hat">
+    <img src="images/hat_01.png" class="draggable" alt="Hat 01">
+    <img src="images/hat_02.png" class="draggable" alt="Hat 02">
+    <img src="images/hat_03.png" class="draggable" alt="Hat 03">
+    <img src="images/hat_04.png" class="draggable" alt="Hat 04">
+    <img src="images/hat_05.png" class="draggable" alt="Hat 05">
+    <img src="images/hat1.png" class="draggable" alt="Hat 1">
+    <img src="images/hut.png" class="draggable" alt="Hut">
+    <img src="images/item_10.png" class="draggable" alt="Item 10">
+    <img src="images/item_15.png" class="draggable" alt="Item 15">
+    <img src="images/item_16.png" class="draggable" alt="Item 16">
+    <img src="images/item_17.png" class="draggable" alt="Item 17">
+    <img src="images/item_18.png" class="draggable" alt="Item 18">
+    <img src="images/item_19.png" class="draggable" alt="Item 19">
+    <img src="images/item_20.png" class="draggable" alt="Item 20">
+    <img src="images/item_21.png" class="draggable" alt="Item 21">
+    <img src="images/item_22.png" class="draggable" alt="Item 22">
+    <img src="images/item_23.png" class="draggable" alt="Item 23">
+    <img src="images/koleki.png" class="draggable" alt="Koleki">
+    <img src="images/logo.png" class="draggable" alt="Logo">
+    <img src="images/marvel.png" class="draggable" alt="Marvel">
+    <img src="images/mouth_01.png" class="draggable" alt="Mouth 01">
+    <img src="images/mouth_02.png" class="draggable" alt="Mouth 02">
+    <img src="images/mouth_03.png" class="draggable" alt="Mouth 03">
+    <img src="images/mouth_04.png" class="draggable" alt="Mouth 04">
+    <img src="images/mouth_05.png" class="draggable" alt="Mouth 05">
+    <img src="images/mouth_06.png" class="draggable" alt="Mouth 06">
+    <img src="images/mouth_07.png" class="draggable" alt="Mouth 07">
+    <img src="images/mouth_08.png" class="draggable" alt="Mouth 08">
+    <img src="images/mustache1.png" class="draggable" alt="Mustache 1">
+    <img src="images/Old man.png" class="draggable" alt="Oldman Base">
+    <img src="images/pants_01.png" class="draggable" alt="Pants 01">
+    <img src="images/pants_02.png" class="draggable" alt="Pants 02">
+    <img src="images/pants_03.png" class="draggable" alt="Pants 03">
+    <img src="images/pants_04.png" class="draggable" alt="Pants 04">
+    <img src="images/pants_05.png" class="draggable" alt="Pants 05">
+    <img src="images/park.png" class="draggable" alt="Park">
+    <img src="images/party.png" class="draggable" alt="Party">
+    <img src="images/party1.png" class="draggable" alt="Party 1">
+    <img src="images/party2.png" class="draggable" alt="Party 2">
+    <img src="images/person_base.png" class="draggable" alt="Person Base">
+    <img src="images/pokemon-hilda.jpg" class="draggable" alt="Pokemon Hilda">
+    <img src="images/pokemon-viola.jpg" class="draggable" alt="Pokemon Viola">
+    <img src="images/rosie-woman.jpg" class="draggable" alt="Rosie Woman">
+    <img src="images/school1.png" class="draggable" alt="School 1">
+    <img src="images/sheena-running.jpg" class="draggable" alt="Sheena Running">
+    <img src="images/shirt_01.png" class="draggable" alt="Shirt 01">
+    <img src="images/shirt_02.png" class="draggable" alt="Shirt 02">
+    <img src="images/shirt_03.png" class="draggable" alt="Shirt 03">
+    <img src="images/shirt_04.png" class="draggable" alt="Shirt 04">
+    <img src="images/shirt_05.png" class="draggable" alt="Shirt 05">
+    <img src="images/shoe_01_L.png" class="draggable" alt="Shoe 01 L">
+    <img src="images/shoe_01_R.png" class="draggable" alt="Shoe 01 R">
+    <img src="images/shoe_02_L.png" class="draggable" alt="Shoe 02 L">
+    <img src="images/shoe_02_R.png" class="draggable" alt="Shoe 02 R">
+    <img src="images/stickboy.png" class="draggable" alt="Stickboy">
+    <img src="images/superhero.png" class="draggable" alt="Superhero">
+    <img src="images/tongue.png" class="draggable" alt="Tongue">
+    <img src="images/trash.png" class="draggable" alt="Trash">
+    <img src="images/tree.png" class="draggable" alt="Tree">
+  </div>
+</div>
+
+<div id="main">
+  <div id="canvas">
+    <img id="base" src="images/rosie-woman.jpg" alt="Base Image">
+  </div>
+
+  <div id="controls">
+    <h3>Controls</h3>
+    <label>Rotate
+      <input type="range" id="rotate" min="-180" max="180" value="0">
+    </label>
+    <label>Scale
+      <input type="range" id="scale" min="0.5" max="2" step="0.01" value="1">
+    </label>
+    <label>Opacity
+      <input type="range" id="opacity" min="0" max="1" step="0.01" value="1">
+    </label>
+    <button id="deleteBtn">Delete Item</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
